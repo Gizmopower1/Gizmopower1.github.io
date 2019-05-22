@@ -1,0 +1,414 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700');
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  color: white;
+   font-family: Roboto, Helvetica, sans-serif;
+   background: url(../img/homeyback.png);
+   background-attachment: fixed;
+   background-repeat: auto;
+   background-size: cover;
+   color: #FFFFFF;
+   font-weight: 300;
+}
+
+a {
+  color: white;
+}
+
+.container {
+  box-sizing: border-box;
+}
+  #container-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .container-dark {
+    background-color: Black;
+    opacity: 0.6;
+  }
+  
+  #info-panel {
+    position: absolute;  
+    height: 60vh;
+    left: 10vw;
+    top: 10vh;
+    padding: 5vh 5vh; 
+    visibility: hidden;
+    overflow: auto;
+    width: 80%;
+    background: url(../img/backmsg.png);
+    background-attachment: fixed;
+    background-repeat: auto;
+    background-size: cover;
+    border: 4px solid #FFFFFF;
+    border-radius: 2px;
+    box-sizing: border-box;
+    z-index: 99;
+    opacity: 0.95;
+    
+  }
+    .info-message {
+      font-size: 24px;
+      font-weight: 350; 
+    }
+
+  #logo {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 110px;
+    height: 110px;
+    background:  no-repeat center center;
+    background-image: url(../img/logo-white.png);
+    background-size: contain;
+  }
+
+  #settings-icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 110px;
+    height: 110px;
+    display: inline-block;
+    background: white;
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center center;
+    -webkit-mask-image: url(../img/settings.png);
+    }
+
+  #version {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 110px;
+    height: 110px;
+  }
+    #version-icon {
+      display: inline-block;
+      position: relative;
+      background: white;
+      -webkit-mask-size: contain;
+      -webkit-mask-repeat: no-repeat;
+      -webkit-mask-position: center center;
+      -webkit-mask-image: url(../img/new.svg);
+      width: 108px;
+      height: 50px; 
+      visibility: hidden;    
+    }
+  
+  #details {
+    position: absolute;
+    right: 110px;
+    top: 0;
+    width: 110px;
+    height: 110px;
+  }
+    #battery-details {
+      display: inline-block;
+      position: relative;
+      background: white;
+      -webkit-mask-size: contain;
+      -webkit-mask-repeat: no-repeat;
+      -webkit-mask-position: center center;
+      -webkit-mask-image: url(../img/battery.png);
+      width: 110px;
+      height: 50px;
+    }
+      #battery-details.alarm {
+        background-color: red;
+      }
+
+    #sensor-details{
+      display: inline-block;
+      position: relative;
+      background: white;
+      -webkit-mask-size: contain;
+      -webkit-mask-repeat: no-repeat;
+      -webkit-mask-position: center center;
+      -webkit-mask-image: url(../img/warning.png);
+      width: 108px;
+      height: 50px;
+    }
+      #sensor-details.alarm {
+        background-color: orange;
+      }
+      #sensor-details.fault {
+        background-color: red;
+      }
+
+    #notification-details{
+      display: inline-block;
+      position: relative;
+      background: white;
+      -webkit-mask-size: contain;
+      -webkit-mask-repeat: no-repeat;
+      -webkit-mask-position: center center;
+      -webkit-mask-image: url(../img/notification.png);
+      width: 104px;
+      height: 50px;
+    }
+      #notification-details.alarm {
+        background-color: orange;
+      }
+
+  #text {
+    text-align: center;
+  }
+    #text-large {
+      font-size: 64px;
+      font-weight: 700;  
+      margin-top: 20px;
+    }
+    #text-large:after {
+      content: "";
+      display: block;
+      height: 1px;
+      background: white;
+      width: 200px;
+      margin: auto;
+      margin: 40px auto;
+    }
+    #text-small {
+      font-size: 34px;
+      font-weight: 500;
+    }
+
+  #weather {
+    
+  }
+    #weather-temperature {
+      font-size: 100px;
+      font-weight: 500;
+      line-height: 96px;
+    }
+    #weather-temperature:after {
+      content: "°";
+    }
+    #weather-state {
+      display: inline-block;
+      position: relative;
+      width: 100px;
+      height: 100px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    #weather-state #weather-state-icon {
+      margin-bottom: 6px;
+      -webkit-mask-size: contain;
+      -webkit-mask-repeat: no-repeat;
+      -webkit-mask-position: center center;
+      background-size: 100px;
+      height: inherit;
+    }
+  
+  #sun-events {
+
+  }
+    #sunrise-icon, #sunset-icon {
+      -webkit-mask-size: contain;
+      -webkit-mask-repeat: no-repeat;
+      -webkit-mask-position: center center;
+      width: 40px;
+      height: 20px;
+    }
+    #sunrise-icon {
+      background: url(../img/sunrise-color.png) no-repeat center center;
+      background-size: 100%;       
+    }
+    #sunset-icon {
+      background: url(../img/sunset-color.png) no-repeat center center;
+      background-size: 100%;
+    }
+
+  .favorites {
+    
+  }
+    .favorites h2 {
+      display: block;
+      width: 1000px;
+      font-size: 42px;
+      font-weight: 300;
+      padding-bottom: 12px;
+      margin-bottom: 30px;
+      color: white;
+    }
+    .favorites h2:after {
+      content: "";
+      display: block;
+      height: 1px;
+      background: linear-gradient(to right, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0) 100%);
+    }
+    .favorites-inner {
+      font-size: 0;
+      overflow-x: hidden;
+      white-space: nowrap;
+      overflow: hidden;
+      -webkit-mask-image: linear-gradient(to right, #000000 90%, rgba(0,0,0,0) 100%);
+    }
+  
+  #flows {
+  }
+    .flows {
+    }
+      .flow {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        overflow: hidden;
+        white-space: nowrap;
+        height: 64px;
+        border: none;
+        border-radius: 64px;
+        overflow: hidden;
+        font-size: 0;
+        margin-right: 24px;
+        background: rgba(255,255,255,0.25);
+        box-shadow: 0 2px 2px rgba(0,0,0,0.1);
+      }
+      .flow.running:before {
+        content: "✓";
+        color: white;
+        text-align: center;
+        line-height: 64px;
+        display: block;
+        background-color: white;
+        color: #61CC38;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        font-size: 32px;
+      }
+        .flow .play {
+          display: inline-block;
+          vertical-align: middle;
+          width: 64px;
+          height: 64px;
+          background: url(../img/play.png) no-repeat center center;
+          background-size: contain;
+          background-image: url(../img/play-color.png);
+        }
+        .flow .name {
+          display: inline-block;
+          vertical-align: middle;
+          height: 64px;
+          line-height: 64px;
+          font-size: 28px;
+          font-weight: 700;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          padding: 0 20px;
+          padding-right: 30px;
+          max-width: 300px;
+          color: white;
+        }
+     
+  #devices {
+    
+  }
+    .devices {
+      overflow-y: visible;
+    }
+      .device {
+        display: inline-block;
+        vertical-align: middle;
+        position: relative;
+        width: 200px;
+        height: 200px;
+        border: 2px solid black;
+        background-color: white;
+        border: none;
+        box-shadow: 0 2px 2px rgba(0,0,0,0.2);
+        border-radius: 32px;
+        box-sizing: border-box;
+        padding: 24px;
+        margin-right: 24px;
+        opacity: 0.5;
+        -webkit-user-select: none;
+      }
+        .device.on {
+          opacity: 1;
+        }
+        .device.alarm {
+          background-color: orange;
+        }
+        .device.push {
+          background-color: grey;
+        }
+        .device.push-long {
+          background-color: darkgrey;
+        }
+        .device .icon {
+          width: 90px;
+          height: 90px;
+          background: black;
+          margin-bottom: 6px;
+          -webkit-mask-size: contain;
+          -webkit-mask-repeat: no-repeat;
+          -webkit-mask-position: center center;
+          -webkit-user-select: none;
+        }
+        .device .icon-capability {
+          width: 90px;
+          height: 90px;
+          background: black;
+          margin-bottom: 6px;
+          -webkit-mask-size: contain;
+          -webkit-mask-repeat: no-repeat;
+          -webkit-mask-position: center center;
+          -webkit-user-select: none;
+        }
+        .device .value {
+          width: 100%;
+          font-size: 28px;
+          height: 64px;
+          line-height: 32px;
+          font-weight: 300;
+          vertical-align: text-top;
+          overflow: hidden;
+          white-space: normal;
+          text-overflow: ellipsis;
+          -webkit-user-select: none;
+          color: black;
+        }
+        #decimal {
+          font-size: 14px;
+          vertical-align: text-top;
+          -webkit-user-select: none;
+        }
+        .device .value.hidden {
+          visibility: hidden;
+        }
+        .device .name {
+          width: 100%;
+          font-size: 28px;
+          height: 64px;
+          line-height: 32px;
+          font-weight: 300;
+          overflow: hidden;
+          white-space: normal;
+          text-overflow: ellipsis;
+          -webkit-user-select: none;
+          color: black;
+        }
+        .device .name.highlight {
+          font-weight: 1000;
+        }
